@@ -25,3 +25,11 @@ def get_skills():
     return {
         "skills" : ["Python","SQL", "FastAPI"]
     }
+
+@app.get("/skills/{skill_name}")
+def get_skill_name(skill_name):    
+    skills = ["Python","SQL"]
+
+    for skill in skills:
+        if skill == skill_name:
+            return skill
