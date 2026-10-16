@@ -1,2 +1,2 @@
 # personal-api
-For pratice.
+This is a Personal info API created for practice purpposes.
