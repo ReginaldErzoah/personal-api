@@ -8,7 +8,7 @@ SKILLS = [
     {"name": "SQL", "category": "data"},
     {"name": "FastAPI", "category": "programming"},
     {"name": "Power BI", "category": "data"},
-    {"name": "Google Sheets", "category":"data" }
+    {"name": "Google Sheets", "category": }
 ]
 
 
