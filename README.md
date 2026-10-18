@@ -226,4 +226,4 @@ Portfolio: [reginalderzoah.github.io](https://reginalderzoah.github.io)
 
 ---
 
-*Personal API is an educational software engineering project developed to strengthen practical REST AP
+*Personal API is an educational software engineering project developed to strengthen pract
