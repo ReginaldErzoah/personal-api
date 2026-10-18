@@ -226,4 +226,4 @@ Portfolio: [reginalderzoah.github.io](https://reginalderzoah.github.io)
 
 ---
 
-*Personal API is an educational software
+*Personal API is an educationa
