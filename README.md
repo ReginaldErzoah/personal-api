@@ -226,4 +226,3 @@ Portfolio: [reginalderzoah.github.io](https://reginalderzoah.github.io)
 
 ---
 
-*Personal
