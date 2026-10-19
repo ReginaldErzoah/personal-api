@@ -221,5 +221,3 @@ Each enhancement should introduce a clear engineering concept and be validated b
 **Reginald Erzoah**
 
 GitHub: [ReginaldErzoah](https://github.com/ReginaldErzoah)
-
-Portfolio:
