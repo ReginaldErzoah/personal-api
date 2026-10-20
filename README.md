@@ -171,7 +171,7 @@ personal-api/
 └── README.md
 ```
 
-This structure represents the expected project layout. The actual repository may contain additional files, and `uv.lock` should be listed only if it exists 
+This structure represents the expected project layout. The actual repository may contain additional files, and `uv.lock` should be listed only 
 
 ## Current Limitations
 
