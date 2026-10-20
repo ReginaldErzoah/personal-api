@@ -1,51 +1,71 @@
 # Personal API
 
-A REST API built with **Python and FastAPI** to provide structured access to personal profile and professional skills information.
+A REST API built with **Python and FastAPI** to provide structured access to personal profile information and professional skills.
 
-Personal API is a hands-on software engineering project focused on developing practical skills in REST API design, request handling, routing, data filtering, error handling, and application structure. It is being developed incrementally as part of a broader journey toward Data Engineering, MLOps, and reliable data systems.
+Personal API is a hands-on software engineering project focused on learning REST API design, HTTP request handling, routing, data filtering, error handling, and Python application structure. It forms part of my journey toward Data Engineering, MLOps, and building reliable data systems.
 
 ## Overview
 
-Personal API exposes profile information and a collection of professional skills through HTTP endpoints. Clients can retrieve profile data, list skills, filter skills by category, and look up an individual skill.
+Personal API exposes personal profile information and a collection of professional skills through HTTP endpoints. Clients can retrieve profile information, list skills, filter skills by category, and look up individual skills.
 
-The project provides a practical environment for learning how to design and implement APIs before introducing more advanced capabilities such as persistent storage, automated testing, authentication, and containerisation.
+The project is being developed incrementally, with an emphasis on understanding API fundamentals before introducing more advanced engineering practices such as automated testing, persistent storage, containerisation, and continuous integration.
 
 ## Current Features
 
-- Built with FastAPI and Python.
-- Retrieve API health information.
-- Retrieve personal profile information.
-- List available skills.
-- Filter skills by category using query parameters.
-- Retrieve skills belonging to a specific category through a dedicated route.
-- Retrieve an individual skill by name.
-- Return HTTP 404 errors when requested skills or categories are not found.
-- Generate interactive API documentation through FastAPI.
+- Built with Python and FastAPI.
+- Health-check endpoint.
+- Personal profile endpoint.
+- Skills listing endpoint.
+- Category-based filtering using query parameters.
+- Dedicated route for retrieving skills by category.
+- Individual skill lookup.
+- HTTP 404 error handling for resources that cannot be found.
+- Interactive API documentation powered by FastAPI.
+
+> Features listed here should reflect the behaviour implemented and tested in the current version.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Application logic and data handling |
-| FastAPI | REST API development and request handling |
-| Uvicorn | ASGI server used to run the application |
-| Git and GitHub | Version control and source code management |
+| FastAPI | API development, routing, and request handling |
+| Uvicorn | ASGI server for running the application |
+| uv | Python project and dependency management |
+| Git | Version control |
+| GitHub | Source code hosting and collaboration |
 
 ## API Endpoints
 
-The following endpoints represent the current application interface.
-
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/` | Access the root endpoint |
-| `GET` | `/health` | Check API health |
-| `GET` | `/profile` | Retrieve profile information |
-| `GET` | `/skills` | Retrieve all skills |
-| `GET` | `/skills?category=programming` | Filter skills by category |
-| `GET` | `/skills/category/{category_name}` | Retrieve skills belonging to a category |
-| `GET` | `/skills/{skill_name}` | Retrieve a skill by name |
+| GET | `/` | Returns a welcome message |
+| GET | `/health` | Returns API health information |
+| GET | `/profile` | Retrieves personal profile information |
+| GET | `/skills` | Retrieves all available skills |
+| GET | `/skills?category=programming` | Filters skills by category |
+| GET | `/skills/category/{category_name}` | Retrieves skills belonging to a category |
+| GET | `/skills/{skill_name}` | Retrieves an individual skill by name |
 
 ### Example Requests
+
+Retrieve the welcome message:
+
+```http
+GET /
+```
+
+Check API health:
+
+```http
+GET /health
+```
+
+Retrieve the profile:
+
+```http
+GET /profile
+```
 
 Retrieve all skills:
 
@@ -59,7 +79,7 @@ Filter skills by category:
 GET /skills?category=programming
 ```
 
-Retrieve skills using the category route:
+Retrieve skills in a category:
 
 ```http
 GET /skills/category/data
@@ -71,22 +91,26 @@ Retrieve an individual skill:
 GET /skills/Python
 ```
 
-The category and skill names must match the values supported by the current application. Matching behaviour depends on the implemented comparison logic.
+The available categories and skill names depend on the application's data and matching logic.
 
-### Error Handling
+## Error Handling
 
-When a requested skill or category does not exist, the API returns an HTTP `404 Not Found` response.
+The API uses HTTP status codes to communicate the outcome of requests.
 
-FastAPI also provides request validation and interactive API documentation.
+- `200 OK` — The request was processed successfully.
+- `404 Not Found` — The requested skill or category could not be found, where applicable.
+
+FastAPI also generates interactive API documentation and supports request validation through Python type annotations and other validation declarations.
 
 ## Getting Started
 
 ### Prerequisites
 
-Install the following software:
+Install the following tools:
 
-- Python 3.12 or a compatible supported version.
+- Python 3.12 or a compatible version supported by the project.
 - Git.
+- uv.
 - A terminal such as Git Bash, PowerShell, or a Linux shell.
 
 ### 1. Clone the repository
@@ -96,65 +120,45 @@ git clone https://github.com/ReginaldErzoah/personal-api.git
 cd personal-api
 ```
 
-Replace `https://github.com/ReginaldErzoah/personal-api.git` with the HTTPS or SSH URL of your GitHub repository.
+### 2. Install project dependencies
 
-### 2. Create a virtual environment
-
-```bash
-python -m venv .venv
-```
-
-Activate it on Windows Git Bash:
+From the project root, run:
 
 ```bash
-source .venv/Scripts/activate
+uv sync
 ```
 
-On Linux or WSL Ubuntu:
+This installs the project's declared dependencies and synchronises its virtual environment.
+
+### 3. Run the API
+
+Start the development server:
 
 ```bash
-source .venv/bin/activate
+uv run fastapi dev src/personal_api/main.py
 ```
 
-### 3. Install dependencies
+The API should be available at:
 
-Install the packages declared by your project. If your repository uses a `pyproject.toml` with `uv`, use the project's configured dependency workflow. Otherwise, install the required dependencies using your chosen package manager.
+`http://127.0.0.1:8000`
 
-For a basic installation:
+The development server automatically reloads the application when supported code changes are detected.
 
-```bash
-python -m pip install fastapi "uvicorn[standard]"
-```
-
-### 4. Run the API
-
-If the application entry point is `src/personal_api/main.py`, and the project is configured for imports from the `src` directory, run:
-
-```bash
-uvicorn personal_api.main:app --reload --app-dir src
-```
-
-The development server will normally be available at:
-
-```text
-http://127.0.0.1:8000
-```
-
-### 5. Explore the API
+### 4. Explore the API
 
 Open the interactive Swagger UI documentation:
 
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-You can inspect available endpoints, supply parameters, send requests, and examine responses directly from your browser.
+Swagger UI allows you to inspect endpoints, provide query and path parameters, send requests, and examine responses.
 
-Alternative documentation is available at:
+Alternative documentation is available through ReDoc:
 
 [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
 ## Project Structure
 
-The current application entry point is located at `src/personal_api/main.py`.
+The current application entry point is `src/personal_api/main.py`.
 
 ```text
 personal-api/
@@ -163,56 +167,58 @@ personal-api/
 │       └── main.py
 ├── .gitignore
 ├── pyproject.toml
+├── uv.lock
 └── README.md
 ```
 
-This is a simplified representation. Keep only files and directories that actually exist in the repository when documenting the final project structure.
+This structure represents the expected project layout. The actual repository may contain additional files, and `uv.lock` should be listed only if it exists in the repository.
 
 ## Current Limitations
 
-The current version is intentionally focused on foundational API development.
+The current version focuses on foundational API development.
 
 - Skills are stored in an in-memory Python collection.
-- Data changes are not persisted to a database.
-- The API currently focuses on retrieval operations rather than complete CRUD functionality.
-- Authentication and authorization are not implemented.
-- Automated test coverage and Docker-based deployment are not yet documented as completed capabilities.
+- Data is not persisted in a database.
+- The API primarily supports retrieval operations rather than full CRUD functionality.
+- Authentication and authorisation are not implemented.
+- Automated testing, containerisation, and deployment are planned areas of development rather than established capabilities.
 
-Because the skills data is held in memory, changes made during application execution will not survive a process restart.
+Because the skills data is held in memory, changes to that collection are not persisted across application restarts.
 
 ## Development Roadmap
 
-Planned enhancements will be introduced as the project develops:
+Planned enhancements include:
 
 - [ ] Introduce structured request and response models using Pydantic.
 - [ ] Improve input validation and error handling.
-- [ ] Add automated unit and API tests using `pytest`.
+- [ ] Add automated tests using pytest and an API test client.
 - [ ] Implement create, update, and delete operations.
-- [ ] Introduce persistent storage with SQLite or PostgreSQL.
+- [ ] Introduce persistent storage using SQLite or PostgreSQL.
 - [ ] Separate routing, business logic, and data access into appropriate modules.
-- [ ] Add configuration management and environment variables.
-- [ ] Containerise the application with Docker.
-- [ ] Add a Docker Compose workflow when supporting services are introduced.
-- [ ] Automate quality checks and tests with GitHub Actions.
+- [ ] Add configuration management and environment variables where needed.
+- [ ] Containerise the application using Docker.
+- [ ] Introduce Docker Compose if additional services are required.
+- [ ] Automate quality checks and testing with GitHub Actions.
 - [ ] Deploy the API and document its operational requirements.
 
-These are planned enhancements, not claims about features already implemented.
+These items represent planned improvements and are not claims about completed functionality.
 
 ## Learning Objectives
 
-This project is designed to build practical understanding of:
+This project is intended to develop practical understanding of:
 
 - Python programming and application structure.
-- REST principles and HTTP methods.
-- FastAPI path operations and parameter handling.
+- REST principles, HTTP methods, and status codes.
+- FastAPI routing and parameter handling.
 - Query-based filtering and resource retrieval.
-- HTTP status codes and exception handling.
-- API documentation and manual endpoint testing.
-- Testing, persistence, containerisation, and deployment as future engineering stages.
+- Input validation and exception handling.
+- API documentation and manual testing.
+- Automated testing and maintainable code.
+- Database integration, containerisation, and deployment.
 
 ## Project Philosophy
 
-The objective is not simply to make endpoints return responses. It is to understand why an API is designed a particular way, how requests move through the application, how errors should be handled, and how the software can become reliable and maintainable.
+The goal is not simply to build endpoints that return responses. It is to understand why an API is designed in a particular way, how requests move through an application, how errors should be handled, and how software can become reliable, testable, and maintainable.
 
 Each enhancement should introduce a clear engineering concept and be validated before additional complexity is added.
 
