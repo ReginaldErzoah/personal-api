@@ -171,7 +171,7 @@ personal-api/
 └── README.md
 ```
 
-This structure represents the expected project layout. The actual repository may contain additional files, and
+This structure represents the expected project layout. The actual repository may contain 
 
 ## Current Limitations
 
