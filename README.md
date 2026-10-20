@@ -171,7 +171,7 @@ personal-api/
 └── README.md
 ```
 
-Th
+T
 
 ## Current Limitations
 
