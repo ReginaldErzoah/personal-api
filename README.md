@@ -96,7 +96,7 @@ git clone <your-repository-url>
 cd personal-api
 ```
 
-Replace `<your-repository-url>` with the HTTPS or SSH URL of your GitHub repository.
+Replace `https://github.com/ReginaldErzoah/personal-api.git` with the HTTPS or SSH URL of your GitHub repository.
 
 ### 2. Create a virtual environment
 
