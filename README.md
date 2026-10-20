@@ -171,8 +171,6 @@ personal-api/
 └── README.md
 ```
 
-T
-
 ## Current Limitations
 
 The current version focuses on foundational API development.
