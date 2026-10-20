@@ -171,7 +171,7 @@ personal-api/
 └── README.md
 ```
 
-This structure represents the 
+This structure represents
 
 ## Current Limitations
 
