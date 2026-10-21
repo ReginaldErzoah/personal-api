@@ -117,7 +117,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** Automated tests and code-quality checks run consistently and detect regressions.
 
-## Phase 8 — Production Configuration and Application Behaviour
+## Phase 8 - Production Configuration and Application Behaviour
 
 - [ ] Separate development, testing, and production configuration.
 - [ ] Define environment variables and sensible defaults.
