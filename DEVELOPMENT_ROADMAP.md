@@ -188,7 +188,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** Code changes are automatically checked and invalid changes cannot pass the required quality gates.
 
-## Phase 12 — Deployment
+## Phase 12 - Deployment
 
 - [ ] Select a container-compatible hosting platform that fits the budget.
 - [ ] Understand its port, configuration, health-check, and startup requirements.
