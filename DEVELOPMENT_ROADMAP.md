@@ -132,7 +132,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** The application can run with explicit configuration and predictable operational behaviour.
 
-## Phase 9 — Docker Containerisation
+## Phase 9 - Docker Containerisation
 
 - [ ] Understand images, containers, layers, ports, networks, and volumes.
 - [ ] Create a `Dockerfile`.
