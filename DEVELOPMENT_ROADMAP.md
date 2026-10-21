@@ -70,7 +70,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** Clients can retrieve a coherent, machine-readable representation of the CV.
 
-## Phase 5 — Refactor the Application
+## Phase 5 - Refactor the Application
 
 - [ ] Move route definitions into dedicated router modules.
 - [ ] Organise Pydantic schemas into appropriate modules.
