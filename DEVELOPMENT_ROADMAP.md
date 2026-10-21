@@ -171,7 +171,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** Required services can be started and operated consistently through a documented Compose workflow.
 
-## Phase 11 — Continuous Integration with GitHub Actions
+## Phase 11 - Continuous Integration with GitHub Actions
 
 - [ ] Create a workflow under `.github/workflows/`.
 - [ ] Trigger the workflow on relevant pushes and pull requests.
