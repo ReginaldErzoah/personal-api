@@ -156,7 +156,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** The image builds reproducibly and the API runs independently of the host's Python environment.
 
-## Phase 10 — Docker Compose (When Required)
+## Phase 10 - Docker Compose (When Required)
 
 - [ ] Decide whether the application needs coordinated services.
 - [ ] Create `compose.yaml` if a database or other supporting service is required.
