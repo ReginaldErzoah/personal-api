@@ -19,7 +19,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** Existing endpoints behave predictably and their request and response behaviour is understood.
 
-## Phase 2 — Design the CV Data Model and API Contract
+## Phase 2 - Design the CV Data Model and API Contract
 
 - [ ] Define the resources the API will expose:
   - Profile
