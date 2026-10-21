@@ -100,7 +100,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** The selected data source is reliable, maintainable, and testable. A database is optional if structured files adequately meet the product's requirements.
 
-## Phase 7 — Automated Testing and Code Quality
+## Phase 7 - Automated Testing and Code Quality
 
 - [ ] Add pytest and HTTPX as development dependencies.
 - [ ] Create a `tests/` directory.
