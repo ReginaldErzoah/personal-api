@@ -220,7 +220,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** Releases follow a repeatable workflow with automated verification and a documented recovery strategy.
 
-## Phase 14 — Final Documentation and Portfolio Readiness
+## Phase 14 - Final Documentation and Portfolio Readiness
 
 - [ ] Keep `README.md` focused on the product, current features, setup, and usage.
 - [ ] Maintain this file as the detailed implementation roadmap.
