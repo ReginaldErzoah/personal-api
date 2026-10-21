@@ -6,7 +6,7 @@ Build a professional CV API that exposes structured career information through a
 
 The roadmap prioritises understanding, maintainability, and reproducibility over adding technologies without a clear purpose.
 
-## Phase 1 — Stabilise the Existing API
+## Phase 1 - Stabilise the Existing API
 
 - [ ] Review the current implementation in `src/personal_api/main.py`.
 - [ ] Understand HTTP methods, status codes, JSON responses, query parameters, and path parameters.
