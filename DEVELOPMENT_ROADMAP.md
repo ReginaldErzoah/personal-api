@@ -205,7 +205,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** The API is accessible over HTTPS, operates as expected, and can be redeployed through documented procedures.
 
-## Phase 13 — Release and Delivery Workflow
+## Phase 13 - Release and Delivery Workflow
 
 - [ ] Establish a simple branching and pull-request strategy.
 - [ ] Define release tags and versioning conventions.
