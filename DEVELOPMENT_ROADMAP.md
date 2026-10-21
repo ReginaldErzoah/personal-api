@@ -84,7 +84,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** Modules have clear responsibilities and the application can grow without concentrating all logic in `main.py`.
 
-## Phase 6 — Choose and Implement Data Storage
+## Phase 6 - Choose and Implement Data Storage
 
 - [ ] Evaluate whether version-controlled structured data files are sufficient for a public, read-only CV API.
 - [ ] If persistence is justified, choose SQLite or PostgreSQL based on the requirements.
