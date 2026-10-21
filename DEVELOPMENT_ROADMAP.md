@@ -41,7 +41,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** The API contract describes the intended resources, fields, routes, and error behaviour.
 
-## Phase 3 — Implement Structured Schemas
+## Phase 3 - Implement Structured Schemas
 
 - [ ] Learn and apply Pydantic models.
 - [ ] Create schemas for profile, skills, projects, experience, education, certifications, and achievements.
