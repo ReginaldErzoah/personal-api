@@ -55,7 +55,7 @@ The roadmap prioritises understanding, maintainability, and reproducibility over
 
 **Done when:** Implemented resources have explicit schemas and predictable response structures.
 
-## Phase 4 — Build the Complete CV API
+## Phase 4 - Build the Complete CV API
 
 - [ ] Expand the profile with a professional headline, summary, and public links.
 - [ ] Represent skills with categories, descriptions, and evidence of application.
