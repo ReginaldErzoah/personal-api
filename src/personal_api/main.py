@@ -89,6 +89,13 @@ CERTIFICATIONS = [
         issue_date = date(2026,6,20),
         credential_url = "https://www.coursera.org/account/accomplishments/specialization/NZFV7TO6HEDH"
     ),
+
+    Certifications(
+        id = 2,
+        name = "Product Analytics Micro-Certification",
+        issuing_organization = "Product School",
+        issue_date = date(2025,7,31)
+    ),
    
 
     
