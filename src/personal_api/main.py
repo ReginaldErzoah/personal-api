@@ -37,5 +37,4 @@ class Cerfiticatons(BaseModel):
     id : int
     name : str
     issuing_organization : str
-    issue_date : date
-    
+    issue_date : date | None = None
