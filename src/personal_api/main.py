@@ -32,3 +32,5 @@ class Project(BaseModel):
     technologies : list[str]
     status : str | None = None
     repo_url : str | None = None
+
+class Cerfiticatons(BaseModel):
