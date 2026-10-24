@@ -19,3 +19,9 @@ class Profile(BaseModel):
     portfolio_url : str
     github_url : str
     linkedin_url : str
+
+class Skill(BaseModel):
+    name : str
+    category : str
+    level : str | None = None
+
