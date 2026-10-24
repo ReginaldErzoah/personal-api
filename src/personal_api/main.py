@@ -25,3 +25,10 @@ class Skill(BaseModel):
     category : str
     level : str | None = None
 
+class Project(BaseModel):
+    id : int
+    name : str
+    description : str
+    technologies : list[str]
+    status : str | None = None
+    repo_url : str | None = None
