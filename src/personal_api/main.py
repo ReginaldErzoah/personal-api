@@ -96,7 +96,21 @@ CERTIFICATIONS = [
         issuing_organization = "Product School",
         issue_date = date(2025,7,31)
     ),
-   
+
+   Certifications(
+       id = 3,
+       name = "Data Management Professional Certficate",
+       issuing_organization = "IBM",
+       issue_date = date (2025,2,9),
+       credential_url = "https://www.coursera.org/account/accomplishments/professional-cert/OH2YCGHZE01U"
+   ),
+
+   Certifications(
+       id = 4,
+       name = "Database Systems Specialization",
+       issuing_organization = "Universidad Nacional Autónoma de México",
+       issue_date = date(2025,2,1)
+   ),
 
     
 ]
