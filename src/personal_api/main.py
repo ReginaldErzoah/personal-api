@@ -16,9 +16,9 @@ class Profile(BaseModel):
     profession : str
     location : str
     summary : str
-    portfolio_url : str
+    portfolio_url : str | None = None
     github_url : str
-    linkedin_url : str
+    linkedin_url : str 
 
 class Skill(BaseModel):
     name : str
@@ -39,3 +39,14 @@ class Cerfiticatons(BaseModel):
     issuing_organization : str
     issue_date : date | None = None
     credential_url : str | None = None
+
+
+PROFILE = Profile(
+    name = "Reginald Erzoah",
+    profession = "Data Professional",
+    location = "Ghana",
+    summary = "A data professional helping build trustworthy & reliable data systems.",
+    portfolio_url = "https://reginalderzoah.github.io",
+    github_url = "https://github.com/ReginaldErzoah",
+    linkedin_url = "https://www.linkedin.com/in/reginald-erzoah"
+)
