@@ -839,6 +839,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
+    { name = "pydantic" },
 ]
 
 [package.dev-dependencies]
@@ -848,7 +849,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "fastapi", extras = ["standard"], specifier = ">=0.143.2" }]
+requires-dist = [
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.143.2" },
+    { name = "pydantic", specifier = ">=2.14.1" },
+]
 
 [package.metadata.requires-dev]
 dev = [
