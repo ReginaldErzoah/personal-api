@@ -110,7 +110,5 @@ CERTIFICATIONS = [
        name = "Database Systems Specialization",
        issuing_organization = "Universidad Nacional Autónoma de México",
        issue_date = date(2025,2,1)
-   ),
-
-    
+   ),    
 ]
