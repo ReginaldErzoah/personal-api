@@ -20,10 +20,12 @@ class Profile(BaseModel):
     github_url : str
     linkedin_url : str 
 
+
 class Skill(BaseModel):
     name : str
     category : str
     level : str | None = None
+
 
 class Project(BaseModel):
     id : int
@@ -33,7 +35,8 @@ class Project(BaseModel):
     status : str | None = None
     repo_url : str | None = None
 
-class Cerfiticatons(BaseModel):
+
+class Certifications(BaseModel):
     id : int
     name : str
     issuing_organization : str
@@ -50,3 +53,43 @@ PROFILE = Profile(
     github_url = "https://github.com/ReginaldErzoah",
     linkedin_url = "https://www.linkedin.com/in/reginald-erzoah"
 )
+
+
+SKILLS = [
+    Skill(name = "Python", category = "programming"),
+    Skill(name =  "FastAPI", category = "programming"),
+    Skill(name = "git", category = "programming"),
+    Skill(name = "SQL", category = "data"),
+    Skill(name = "Power BI", category = "data"),
+    Skill(name = "Google Sheets", category = "data"),
+]
+
+
+PROJECTS = [
+    Project(
+        id = 1,
+        description = 
+        """
+        A REST API for exposing structured professional 
+        profile, skills, projects, experience, education, 
+        and certification information.
+        """,
+        technologies = ["Python", "FastAPI", "Pydantic", "Docker"],
+        status = "in progress",
+        repo_url = "https://github.com/ReginaldErzoah/personal-api"
+    ),
+]
+
+
+CERTIFICATIONS = [
+    Certifications(
+        id = 1,
+        name = "Machine Learning Specialization",
+        issuing_organization = "Standford Online & DeepLearning.AI",
+        issue_date = date(2026,6,20),
+        credential_url = "https://www.coursera.org/account/accomplishments/specialization/NZFV7TO6HEDH"
+    ),
+   
+
+    
+]
