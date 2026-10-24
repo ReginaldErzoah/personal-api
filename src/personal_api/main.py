@@ -36,4 +36,4 @@ class Project(BaseModel):
 class Cerfiticatons(BaseModel):
     id : int
     name : str
-    issuing_organization :
+    issuing_organization : str
