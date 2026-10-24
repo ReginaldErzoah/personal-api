@@ -38,3 +38,4 @@ class Cerfiticatons(BaseModel):
     name : str
     issuing_organization : str
     issue_date : date | None = None
+    credential_url :
