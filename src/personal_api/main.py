@@ -127,3 +127,15 @@ def find_by_id(items:list, item_id:int, resource_name:str):
         status_code = 404,
         detail = f"{resource_name} with ID {item_id} not found."
     )
+
+
+def find_by_name(items:list, item_name:str, resource_name:str):
+    normalized_name = normalize_text(item_name)
+    for item in items:
+        if normalize_text(item.name) == normalized_name:
+            return item
+
+    raise HTTPException(
+        status_code = 404,
+        details = f"{resource_name} named {item_name} not found"
+    )
