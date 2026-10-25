@@ -139,3 +139,13 @@ def find_by_name(items:list, item_name:str, resource_name:str):
         status_code = 404,
         details = f"{resource_name} named {item_name} not found"
     )
+
+
+@app.get("/", tags=["General"])
+def read_root():
+    return {"message" : "Welcome to my Personal CV API"}
+
+
+@app.get("/health", tags=["General"])
+def get_health():
+    return {"status" : "healthy"}
