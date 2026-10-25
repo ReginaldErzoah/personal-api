@@ -148,3 +148,8 @@ def read_root():
 @app.get("/health", tags=["General"])
 def get_health():
     return {"status" : "healthy"}
+
+
+@app.get("/profile", response_model=Profile, tags=["Profile"])
+def get_profile():
+    return PROFILE
