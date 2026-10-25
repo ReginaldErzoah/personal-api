@@ -36,7 +36,7 @@ class Project(BaseModel):
     repo_url : str | None = None
 
 
-class Certifications(BaseModel):
+class Certification(BaseModel):
     id : int
     name : str
     issuing_organization : str
