@@ -1,6 +1,6 @@
 from datetime import date
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 
@@ -118,6 +118,12 @@ def normalize_text(value:str) -> str:
     return value.strip().casefold()
 
 
-
 def find_by_id(items:list, item_id:int, resource_name:str):
-    
+    for item in items:
+        if item.id == item_id:
+            return item
+
+    raise HTTPException(
+        status_code = 404,
+        detail = f"{resource_name} with ID {item_id} not found."
+    )
