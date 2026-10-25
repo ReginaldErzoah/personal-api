@@ -68,12 +68,11 @@ SKILLS = [
 PROJECTS = [
     Project(
         id = 1,
-        description = 
-        """
+        name = "Personal API",
+        description = """
         A REST API for exposing structured professional 
         profile, skills, projects, experience, education, 
-        and certification information.
-        """,
+        and certification information.""",
         technologies = ["Python", "FastAPI", "Pydantic", "Docker"],
         status = "in progress",
         repo_url = "https://github.com/ReginaldErzoah/personal-api"
