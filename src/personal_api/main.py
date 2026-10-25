@@ -136,7 +136,7 @@ def find_by_name(items:list, item_name:str, resource_name:str):
 
     raise HTTPException(
         status_code = 404,
-        details = f"{resource_name} named {item_name} not found"
+        detail = f"{resource_name} named {item_name} not found"
     )
 
 
@@ -158,3 +158,7 @@ def get_profile():
 def get_skills():
     return SKILLS
 
+
+@app.get("/skills/{skill_name}", response_model=Skill, tags=["Skills"])
+def get_skill_by_name(skill_name:str):
+    return find_by_name(SKILLS, skill_name, "Skill")
