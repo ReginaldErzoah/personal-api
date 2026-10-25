@@ -89,7 +89,7 @@ CERTIFICATIONS = [
         credential_url = "https://www.coursera.org/account/accomplishments/specialization/NZFV7TO6HEDH"
     ),
 
-    Certifications(
+    Certification(
         id = 2,
         name = "Product Analytics Micro-Certification",
         issuing_organization = "Product School",
