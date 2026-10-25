@@ -104,7 +104,7 @@ CERTIFICATIONS = [
        credential_url = "https://www.coursera.org/account/accomplishments/professional-cert/OH2YCGHZE01U"
    ),
 
-   Certifications(
+   Certification(
        id = 4,
        name = "Database Systems Specialization",
        issuing_organization = "Universidad Nacional Autónoma de México",
