@@ -153,3 +153,8 @@ def get_health():
 @app.get("/profile", response_model=Profile, tags=["Profile"])
 def get_profile():
     return PROFILE
+
+@app.get("/skills", response_model=list[Skill], tags=["Skills"])
+def get_skills():
+    return SKILLS
+
