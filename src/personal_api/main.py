@@ -96,7 +96,7 @@ CERTIFICATIONS = [
         issue_date = date(2025,7,31)
     ),
 
-   Certifications(
+   Certification(
        id = 3,
        name = "Data Management Professional Certficate",
        issuing_organization = "IBM",
