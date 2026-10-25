@@ -84,7 +84,7 @@ CERTIFICATIONS = [
     Certifications(
         id = 1,
         name = "Machine Learning Specialization",
-        issuing_organization = "Standford Online & DeepLearning.AI",
+        issuing_organization = "Stanford Online & DeepLearning.AI",
         issue_date = date(2026,6,20),
         credential_url = "https://www.coursera.org/account/accomplishments/specialization/NZFV7TO6HEDH"
     ),
