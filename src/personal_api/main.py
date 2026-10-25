@@ -81,7 +81,7 @@ PROJECTS = [
 
 
 CERTIFICATIONS = [
-    Certifications(
+    Certification(
         id = 1,
         name = "Machine Learning Specialization",
         issuing_organization = "Stanford Online & DeepLearning.AI",
