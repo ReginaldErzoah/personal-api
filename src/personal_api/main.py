@@ -115,7 +115,8 @@ CERTIFICATIONS = [
 
 
 def normalize_text(value:str) -> str:
-    
+    return value.strip().casefold()
+
 
 
 def find_by_id(items:list, item_id:int, resource_name:str):
