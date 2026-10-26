@@ -173,3 +173,5 @@ def get_projects_by_name(project_name : str):
 
 
 @app.get("Projects/{project_id}", response_model=Project, tags=["Projects"])
+def get_projects_by_id(project_id:int):
+    
