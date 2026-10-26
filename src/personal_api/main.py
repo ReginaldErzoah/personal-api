@@ -69,10 +69,8 @@ PROJECTS = [
     Project(
         id = 1,
         name = "Personal API",
-        description = """
-        A REST API for exposing structured professional 
-        profile, skills, projects, experience, education, 
-        and certification information.""",
+        description =
+        "A REST API for exposing structured professional profile, skills, projects, experience, education, and certification information.",
         technologies = ["Python", "FastAPI", "Pydantic", "Docker"],
         status = "in progress",
         repo_url = "https://github.com/ReginaldErzoah/personal-api"
@@ -162,3 +160,8 @@ def get_skills():
 @app.get("/skills/{skill_name}", response_model=Skill, tags=["Skills"])
 def get_skill_by_name(skill_name:str):
     return find_by_name(SKILLS, skill_name, "Skill")
+
+
+@app.get("/projects", response_model = list[Project], tags=["Projects"])
+def get_projects():
+    return PROJECTS
