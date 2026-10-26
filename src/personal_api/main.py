@@ -165,3 +165,6 @@ def get_skill_by_name(skill_name:str):
 @app.get("/projects", response_model = list[Project], tags=["Projects"])
 def get_projects():
     return PROJECTS
+
+
+@app.get("/Profile/{project_name}", response_model=Project, tags =["Projects"])
