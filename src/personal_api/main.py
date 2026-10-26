@@ -168,3 +168,5 @@ def get_projects():
 
 
 @app.get("/Profile/{project_name}", response_model=Project, tags =["Projects"])
+def get_projects_by_name(project_name : str):
+    
