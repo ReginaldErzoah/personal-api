@@ -167,7 +167,7 @@ def get_projects():
     return PROJECTS
 
 
-@app.get("/Profile/{project_name}", response_model=Project, tags =["Projects"])
+@app.get("/projects/{project_name}", response_model=Project, tags =["Projects"])
 def get_projects_by_name(project_name : str):
     return find_by_name(PROJECTS, project_name, "Project")
 
