@@ -168,10 +168,10 @@ def get_projects():
 
 
 @app.get("/projects/{project_name}", response_model=Project, tags =["Projects"])
-def get_projects_by_name(project_name : str):
+def get_project_by_name(project_name : str):
     return find_by_name(PROJECTS, project_name, "Project")
 
 
 @app.get("/projects/{project_id}", response_model=Project, tags=["Projects"])
-def get_projects_by_id(project_id:int):
+def get_project_by_id(project_id:int):
     return find_by_id(PROJECTS, project_id, "Project")
