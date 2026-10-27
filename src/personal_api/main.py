@@ -183,3 +183,4 @@ def get_certfication():
 
 
 @app.get("/certifications", response_model=Certification, tags=["Certifications"])
+def get_certification__by_name(certification_name: str):
