@@ -182,7 +182,7 @@ def get_certfication():
     return CERTIFICATIONS
 
 
-app.get("certifications/by_id/{certification_id}", response_model=Certification, tags=["Certifications"])
+@app.get("/certifications/by_id/{certification_id}", response_model=Certification, tags=["Certifications"])
 def get_certification_by_id(certification_id:int):
     return find_by_id(CERTIFICATIONS, certification_id, "Certification")
 
