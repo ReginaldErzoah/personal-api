@@ -177,6 +177,9 @@ def get_project_by_name(project_name : str):
     return find_by_name(PROJECTS, project_name, "Project")
 
 
-@app.get("/certifications", response_model=list[Certification], tags=["Certification"])
+@app.get("/certifications", response_model=list[Certification], tags=["Certifications"])
 def get_certfication():
     return CERTIFICATIONS
+
+
+@app.get("/certifications", response_model=Certification, tags=["Certifications"])
