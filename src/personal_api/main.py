@@ -175,3 +175,8 @@ def get_project_by_name(project_name : str):
 @app.get("/projects/{project_id}", response_model=Project, tags=["Projects"])
 def get_project_by_id(project_id:int):
     return find_by_id(PROJECTS, project_id, "Project")
+
+
+@app.get("/certifications", response_model=list[Certification], tags=["Certification"])
+def get_certfication():
+    return CERTIFICATIONS
