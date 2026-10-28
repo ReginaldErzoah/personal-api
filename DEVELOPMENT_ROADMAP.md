@@ -71,15 +71,30 @@ Build a reliable, well-tested, and containerized REST API that exposes my profes
 - [ ] Document the live API URL and available endpoints.
 - [ ] Update the README with deployment instructions.
 
-## Phase 8: Final Documentation and Portfolio
+## Phase 8: Build a Gradio Interface
+
+- [ ] Understand what Gradio is and how it works with APIs.
+- [ ] Install Gradio.
+- [ ] Create a simple web interface for my professional profile.
+- [ ] Display my skills, projects, experience, education, and certifications.
+- [ ] Connect the Gradio interface to the Personal API using HTTP requests.
+- [ ] Handle API errors and unavailable responses gracefully.
+- [ ] Improve the interface layout and usability.
+- [ ] Test the interface locally.
+- [ ] Deploy the Gradio application.
+- [ ] Document how the interface communicates with the API.
+
+## Phase 9: Final Documentation and Portfolio
 
 - [ ] Write a clear `README.md`.
-- [ ] Document each endpoint and its expected response.
+- [ ] Document each API endpoint and its expected response.
 - [ ] Add instructions for local development and testing.
-- [ ] Document Docker and deployment workflows.
+- [ ] Document Docker, CI, and deployment workflows.
 - [ ] Include example API requests and responses.
+- [ ] Document the Gradio interface and provide its URL.
 - [ ] Keep the repository organized and professional.
 - [ ] Add the project to my portfolio and CV.
+
 
 ## Recommended Learning Resources
 
