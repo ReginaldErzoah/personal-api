@@ -26,4 +26,4 @@ def test_profile_endpoint():
     response = client.get("/profile")
 
     assert response.status_code == 200
-    
+    assert response.json()["name"] == "Reginald Erzoah"
