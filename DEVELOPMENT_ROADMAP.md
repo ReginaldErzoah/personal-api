@@ -17,7 +17,7 @@ Build a reliable, well-tested, and containerized REST API that exposes my profes
 
 ## Phase 2: Learn API Testing
 
-- [ ] Install `pytest` and `httpx`.
+- [x] Install `pytest` and `httpx`.
 - [ ] Create a `tests/` directory.
 - [ ] Write tests for successful API requests.
 - [ ] Test response data and status codes.
