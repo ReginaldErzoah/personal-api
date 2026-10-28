@@ -8,8 +8,10 @@ def test_root_endpoint():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.json() == {"message" : "Welcome to my Personal CV API"}
-    
+    assert response.json() == {
+        "message" : "Welcome to my Personal CV API"
+        }
+
 
 def test_health_endpoint():
     response = client.get("/health")
