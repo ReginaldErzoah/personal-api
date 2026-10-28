@@ -3,7 +3,6 @@ from datetime import date
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-
 app = FastAPI(
     title = "Personal CV API",
     description = "A REST API providing structured information found on my professional CV.",
