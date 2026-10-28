@@ -4,6 +4,8 @@ from personal_api.main import app
 client = TestClient(app)
 
 def test_root_endpoint():
+    response = client.get("/")
+
     
 
 def test_health_endpoint():
