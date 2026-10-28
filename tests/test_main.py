@@ -20,3 +20,6 @@ def test_health_endpoint():
     assert response.json() == {
         "status" : "healthy"
         }
+
+
+def test_profile_endpoint():
