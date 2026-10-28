@@ -23,3 +23,4 @@ def test_health_endpoint():
 
 
 def test_profile_endpoint():
+    response = client.get("/profile")
