@@ -48,3 +48,5 @@ def test_skills_by_name_insensitive():
     assert response.json()["name"] == "Python"
 
 
+def test_projects_endpoint():
+    
