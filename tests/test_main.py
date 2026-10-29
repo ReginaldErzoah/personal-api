@@ -33,3 +33,7 @@ def test_profile_endpoint():
 def test_skills_endpoint():
     response = client.get("/skills")
     
+    assert response.status_code == 200
+
+    skills = response.json()
+    assert isinstance(skills,list)
