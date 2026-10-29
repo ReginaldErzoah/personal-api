@@ -55,4 +55,7 @@ def test_projects_endpoint():
 
     projects = response.json()
     assert isinstance(projects, list)
+
+
+def test_projects_by_id():
     
