@@ -38,3 +38,6 @@ def test_skills_endpoint():
     skills = response.json()
     assert isinstance(skills, list)
     assert skills[0]["name"] == "Python"
+
+
+def test_skills_by_name():
