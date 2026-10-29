@@ -31,4 +31,5 @@ def test_profile_endpoint():
 
 
 def test_skills_endpoint():
+    response = client.get("/skills")
     
