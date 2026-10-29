@@ -58,4 +58,6 @@ def test_projects_endpoint():
 
 
 def test_projects_by_id():
+    response = client.get("/projects/by_id/1")
+
     
