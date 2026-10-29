@@ -40,4 +40,5 @@ def test_skills_endpoint():
     assert skills[0]["name"] == "Python"
 
 
-def test_skills_by_name():
+def test_skills_by_name_insensitive():
+    
