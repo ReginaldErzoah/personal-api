@@ -52,3 +52,6 @@ def test_projects_endpoint():
     response = client.get("/projects")
 
     assert response.status_code == 200
+
+    projects = response.json()
+    assert 
