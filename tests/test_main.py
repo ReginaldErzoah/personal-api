@@ -49,4 +49,6 @@ def test_skills_by_name_insensitive():
 
 
 def test_projects_endpoint():
-    
+    response = client.get("/projects")
+
+    assert response.status_code == 200
