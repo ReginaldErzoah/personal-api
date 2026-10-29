@@ -28,3 +28,7 @@ def test_profile_endpoint():
     assert response.status_code == 200
     assert response.json()["name"] == "Reginald Erzoah"
     assert response.json()["profession"] == "Data Professional"
+
+
+def test_skills_endpoint():
+    
