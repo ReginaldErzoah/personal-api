@@ -54,4 +54,5 @@ def test_projects_endpoint():
     assert response.status_code == 200
 
     projects = response.json()
-    assert 
+    assert isinstance(projects, list)
+    
