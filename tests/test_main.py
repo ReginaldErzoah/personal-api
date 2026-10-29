@@ -45,6 +45,6 @@ def test_skills_by_name_insensitive():
 
     assert response.status_code == 200
 
-    skills = response.json()
+    assert response.json()["name"] == "Python"
 
 
