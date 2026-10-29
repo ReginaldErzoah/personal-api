@@ -36,4 +36,5 @@ def test_skills_endpoint():
     assert response.status_code == 200
 
     skills = response.json()
-    assert isinstance(skills,list)
+    assert isinstance(skills, list)
+    assert skills[0]["name"] == "Python"
