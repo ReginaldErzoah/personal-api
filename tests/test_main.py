@@ -4,22 +4,19 @@ from personal_api.main import app
 
 client = TestClient(app)
 
+
 def test_root_endpoint():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.json() == {
-        "message" : "Welcome to my Personal CV API"
-        }
+    assert response.json() == {"message": "Welcome to my Personal CV API"}
 
 
 def test_health_endpoint():
     response = client.get("/health")
 
     assert response.status_code == 200
-    assert response.json() == {
-        "status" : "healthy"
-        }
+    assert response.json() == {"status": "healthy"}
 
 
 def test_profile_endpoint():
@@ -32,7 +29,7 @@ def test_profile_endpoint():
 
 def test_skills_endpoint():
     response = client.get("/skills")
-    
+
     assert response.status_code == 200
 
     skills = response.json()
@@ -86,9 +83,7 @@ def test_certifications_endpoint():
 
 
 def test_certification_by_name():
-    response = client.get(
-        "/certifications/Machine Learning Specialization"
-    )
+    response = client.get("/certifications/Machine Learning Specialization")
 
     assert response.status_code == 200
 
@@ -109,24 +104,18 @@ def test_skill_not_found():
     response = client.get("/skills/dancing")
 
     assert response.status_code == 404
-    assert response.json() == {
-        "detail": "Skill named dancing not found"
-    }
+    assert response.json() == {"detail": "Skill named dancing not found"}
 
 
 def test_project_id_not_found():
     response = client.get("/projects/by_id/7")
 
     assert response.status_code == 404
-    assert response.json() == {
-        "detail": "Project with ID 7 not found."
-    }
+    assert response.json() == {"detail": "Project with ID 7 not found."}
 
 
 def test_certification_id_not_found():
     response = client.get("/certifications/by_id/20")
 
     assert response.status_code == 404
-    assert response.json() =={
-        "detail": "Certification with ID 20 not found."
-    }
+    assert response.json() == {"detail": "Certification with ID 20 not found."}
