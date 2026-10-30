@@ -64,4 +64,5 @@ def test_projects_by_id():
 
 
 def test_certifications_endpoint():
+    respnse = client.get("/certfications")
     
