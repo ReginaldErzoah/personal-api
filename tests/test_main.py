@@ -63,6 +63,17 @@ def test_projects_by_id():
     assert response.status_code == 200
 
 
+def test_project_by_name():
+    response = client.get("/projects/Personal API")
+
+    assert response.status_code == 200
+
+    project = response.json()
+
+    assert project["id"] == 1
+    assert project["name"] == "Personal API"
+
+
 def test_certifications_endpoint():
     response = client.get("/certifications")
 
@@ -72,6 +83,9 @@ def test_certifications_endpoint():
 
     assert isinstance(certifications, list)
     assert certifications[0]["name"] == "Machine Learning Specialization"
+
+
+
 
 
 def test_certifications_by_id():
