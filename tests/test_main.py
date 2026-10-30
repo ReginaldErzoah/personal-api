@@ -86,7 +86,7 @@ def test_skill_not_found():
 
     assert response.status_code == 404
     assert response.json() == {
-    "detail": "Skill named dancing not found"
+        "detail": "Skill named dancing not found"
     }
 
 
@@ -94,4 +94,6 @@ def test_project_id_not_found():
     response = client.get("/projects/by_id/7")
 
     assert response.status_code == 404
-    
+    assert response.json() == {
+        "detail": "Project with ID 7 not found."
+    }
