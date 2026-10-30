@@ -88,3 +88,7 @@ def test_skill_not_found():
     assert response.json() == {
     "detail": "Skill named dancing not found"
     }
+
+
+def test_project_id_not_found():
+    
