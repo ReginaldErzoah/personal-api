@@ -137,7 +137,7 @@ def read_root():
 
 
 @app.get("/health", tags=["General"])
-def get_health():
+def get_health() -> dict[str, str]:
     return {"status": "healthy"}
 
 
