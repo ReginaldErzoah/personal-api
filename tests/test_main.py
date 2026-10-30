@@ -91,4 +91,6 @@ def test_skill_not_found():
 
 
 def test_project_id_not_found():
-    
+    response = client.get("/projects/by_id/7")
+
+    assert res
