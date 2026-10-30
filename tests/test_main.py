@@ -66,4 +66,4 @@ def test_projects_by_id():
 def test_certifications_endpoint():
     response = client.get("/certfications")
 
-    assert response.sta
+    assert response.status_code == 200
