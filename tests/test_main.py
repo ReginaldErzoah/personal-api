@@ -85,4 +85,6 @@ def test_skill_not_found():
     response = client.get("/skills/dancing")
 
     assert response.status_code == 404
-    
+    assert response.json() == {
+    "detail": "Skill named dancing not found"
+    }
