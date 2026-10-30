@@ -84,4 +84,5 @@ def test_certifications_by_id():
 def test_skill_not_found():
     response = client.get("/skills/dancing")
 
-    assert 
+    assert response.status_code == 404
+    
