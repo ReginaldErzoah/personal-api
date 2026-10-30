@@ -78,4 +78,8 @@ def test_certifications_by_id():
     response = client.get("/certifications/by_id/1")
 
     assert response.status_code == 200
+    assert response.json()["name"] == "Machine Learning Specialization"
+
+
+def test_skill_not_found():
     
