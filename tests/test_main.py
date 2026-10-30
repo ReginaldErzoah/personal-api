@@ -79,10 +79,10 @@ def test_certifications_endpoint():
 
     assert response.status_code == 200
 
-    certifications = response.json()
+    certification = response.json()
 
-    assert isinstance(certifications, list)
-    assert certifications[0]["name"] == "Machine Learning Specialization"
+    assert isinstance(certification, list)
+    assert certification[0]["name"] == "Machine Learning Specialization"
 
 
 def test_certification_by_name():
