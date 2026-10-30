@@ -97,3 +97,7 @@ def test_project_id_not_found():
     assert response.json() == {
         "detail": "Project with ID 7 not found."
     }
+
+
+def test_certification_id_not_found():
+    
