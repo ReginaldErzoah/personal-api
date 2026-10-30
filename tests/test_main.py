@@ -100,4 +100,6 @@ def test_project_id_not_found():
 
 
 def test_certification_id_not_found():
+    response = client.get("/certifications/by_id/20")
+
     
