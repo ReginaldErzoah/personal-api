@@ -67,3 +67,6 @@ def test_certifications_endpoint():
     response = client.get("/certfications")
 
     assert response.status_code == 200
+
+    certifications = response.json()
+    assert certifications[0]["name"] == "Machine Learning Specialization"
