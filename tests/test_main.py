@@ -75,4 +75,6 @@ def test_certifications_endpoint():
 
 
 def test_certifications_by_id():
+    response = client.get("/certifications/by_id/1")
+
     
