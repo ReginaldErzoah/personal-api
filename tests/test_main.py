@@ -61,4 +61,7 @@ def test_projects_by_id():
     response = client.get("/projects/by_id/1")
 
     assert response.status == 200
+
+
+def test_certifications_endpoint():
     
