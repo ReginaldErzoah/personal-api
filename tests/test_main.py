@@ -72,3 +72,7 @@ def test_certifications_endpoint():
 
     assert isinstance(certifications, list)
     assert certifications[0]["name"] == "Machine Learning Specialization"
+
+
+def test_certifications_by_id():
+    
