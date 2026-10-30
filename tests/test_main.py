@@ -103,4 +103,6 @@ def test_certification_id_not_found():
     response = client.get("/certifications/by_id/20")
 
     assert response.status_code == 404
-    
+    assert response.json() =={
+        "detail": "Certification with ID 20 not found."
+    }
