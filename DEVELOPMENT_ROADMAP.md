@@ -26,7 +26,7 @@ Build a reliable, well-tested, and containerized REST API that exposes my profes
 
 ## Phase 3: Improve Code Quality
 
-- [ ] Follow Python's PEP 8 style guidelines.
+- [x] Follow Python's PEP 8 style guidelines.
 - [ ] Use Ruff for linting and formatting.
 - [ ] Use type hints consistently.
 - [ ] Improve error handling and input validation.
