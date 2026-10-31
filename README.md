@@ -113,4 +113,4 @@ See [DEVELOPMENT_ROADMAP.md](DEVELOPMENT_ROADMAP.md) for the planned milestones,
 
 **Reginald Erzoah**
 
-- GitHub: https://
+- GitHub: https:
