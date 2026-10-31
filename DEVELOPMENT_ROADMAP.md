@@ -30,7 +30,7 @@ Build a reliable, well-tested, and containerized REST API that exposes my profes
 - [x] Use Ruff for linting and formatting.
 - [x] Use type hints consistently.
 - [x] Improve error handling and input validation.
-- [ ] Organize code into separate modules when necessary.
+- [x] Organize code into separate modules when necessary.
 - [ ] Ensure all tests pass.
 
 ## Phase 4: Add Persistent Storage
