@@ -1,1 +1,1 @@
-import gradio as
+import gradio as gr
