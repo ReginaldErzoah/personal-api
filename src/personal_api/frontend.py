@@ -131,3 +131,16 @@ def get_certification_by_id(api_url, certification_id):
     )
 
     return make_request(api_url, endpoint)
+
+
+def get_certification_by_name(api_url, certification_name):
+
+    if not certification_name or not certification_name.strip():
+        return {"error": "Please enter a certification name."}
+
+    endpoint = (
+        f"/certifications/"
+        f"{quote(certification_name.strip(), safe='')}"
+    )
+
+    return make_request(api_url, endpoint)
