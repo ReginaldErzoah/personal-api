@@ -239,3 +239,63 @@ with gr.Blocks(title=APP_TITLE) as app:
             inputs=[api_url, skill_name],
             outputs=[skill_output]
         )
+
+
+    with gr.Tab("Projects"):
+
+        gr.Markdown("## My Projects")
+
+        projects_button = gr.Button(
+            "Load All Projects",
+            variant="primary"
+        )
+
+        projects_output = gr.JSON(
+            label="Projects"
+        )
+
+        projects_button.click(
+            fn=get_projects,
+            inputs=[api_url],
+            outputs=[projects_output]
+        )
+
+        gr.Markdown("### Find a Project")
+
+        with gr.Row():
+
+            project_id = gr.Textbox(
+                label="Project ID",
+                placeholder="Enter project ID"
+            )
+
+            project_id_button = gr.Button("Find by ID")
+
+        project_id_output = gr.JSON(
+            label="Project Details by ID"
+        )
+
+        project_id_button.click(
+            fn=get_project_by_id,
+            inputs=[api_url, project_id],
+            outputs=[project_id_output]
+        )
+
+        with gr.Row():
+
+            project_name = gr.Textbox(
+                label="Project Name",
+                placeholder="e.g. Personal API"
+            )
+
+            project_name_button = gr.Button("Find by Name")
+
+        project_name_output = gr.JSON(
+            label="Project Details by Name"
+        )
+
+        project_name_button.click(
+            fn=get_project_by_name,
+            inputs=[api_url, project_name],
+            outputs=[project_name_output]
+        )
