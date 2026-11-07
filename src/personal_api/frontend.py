@@ -157,4 +157,42 @@ with gr.Blocks(title=APP_TITLE) as app:
     )
 
 
-    
+    with gr.Accordion("API Connection Settings", open=False):
+
+        api_url = gr.Textbox(
+            label="FastAPI Base URL",
+            value=DEFAULT_API_URL,
+            placeholder="http://127.0.0.1:8000"
+        )
+
+        health_button = gr.Button("Check API Connection")
+
+        health_output = gr.JSON(
+            label="API Health Status"
+        )
+
+        health_button.click(
+            fn=check_api_health,
+            inputs=[api_url],
+            outputs=[health_output]
+        )
+
+
+    with gr.Tab("Profile"):
+
+        gr.Markdown("## Professional Profile")
+
+        profile_button = gr.Button(
+            "Load My Profile",
+            variant="primary"
+        )
+
+        profile_output = gr.JSON(
+            label="Profile Information"
+        )
+
+        profile_button.click(
+            fn=get_profile,
+            inputs=[api_url],
+            outputs=[profile_output]
+        )
