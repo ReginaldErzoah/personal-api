@@ -12,7 +12,7 @@ DEFAULT_API_URL = os.getenv(
 
 APP_TITLE = "Personal API"
 APP_DESCRIPTION = """
-Explore my profile professional profile, technical skills, projects 
+Explore my professional profile, technical skills, projects,
 and certifications through my Personal API.
 """
 
@@ -23,26 +23,30 @@ def make_request(api_url: str, endpoint: str):
     if not api_url:
         return {"error": "Provide a valid API URL."}
 
-    url = f"{api_url}/{endpoint.lstrip("/")}"
+    url = f"{api_url}/{endpoint.lstrip('/')}"
 
     try:
-        response = requests.get(url,timeout=15)
+        response = requests.get(url, timeout=15)
 
         response.raise_for_status()
 
         try:
-            response.json()
+            return response.json()
 
         except requests.exceptions.JSONDecodeError:
             return {"response": response.text}
 
     except requests.exceptions.ConnectionError:
-        return {"error": "Couldn't connect to the API",
-                "details": "Check if FastAPI application is running."
-                "Make sure API url is also valid."}
+        return {
+            "error": "Could not connect to the API.",
+            "details": "Check that your FastAPI application is running "
+                       "and that the API URL is correct."
+        }
 
     except requests.exceptions.Timeout:
-        return {"error": "The API request timed out"}
+        return {
+            "error": "The API request timed out."
+        }
 
     except requests.exceptions.HTTPError:
         try:
@@ -51,7 +55,7 @@ def make_request(api_url: str, endpoint: str):
             error_details = response.text
 
         return {
-            "error": f"API request failed with status: {response.status_code}.",
+            "error": f"API request failed with status {response.status_code}.",
             "details": error_details
         }
 
@@ -103,7 +107,7 @@ def get_project_by_name(api_url,project_name):
     if not project_name or not project_name.strip():
         return {"error": "Enter project name."}
 
-    endpoint = f"/projects/by_name/{quote(str(project_name).strip(),safe='')}"
+    endpoint = f"/projects/{quote(str(project_name).strip(),safe='')}"
 
     return make_request(api_url,endpoint)
 
@@ -141,11 +145,9 @@ def get_certification_by_name(api_url, certification_name):
 with gr.Blocks(title=APP_TITLE) as app:
 
     gr.Markdown(
-        f"""
-        # {APP_TITLE}
+    f"""# {APP_TITLE}
 
-        {APP_DESCRIPTION}
-        """
+    {APP_DESCRIPTION}"""
     )
 
 
@@ -351,3 +353,8 @@ with gr.Blocks(title=APP_TITLE) as app:
             inputs=[api_url, certification_name],
             outputs=[certification_name_output]
         )
+
+
+if __name__ == "__main__":
+
+    app.launch()
