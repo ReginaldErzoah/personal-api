@@ -65,5 +65,20 @@ def make_request(api_url: str, endpoint: str):
 def check_api_health(api_url):
     return make_request(api_url,"/health")
 
+
 def get_profile(api_url):
     return make_request(api_url,"/profile")
+
+
+def get_skills(api_url):
+    return make_request(api_url,"/skills")
+
+
+def get_skill_by_name(api_url, skill_name):
+
+    if not skill_name or not skill_name.strip():
+        return {"error": "Enter a skill name."}
+
+    endpoint = f"/skills/{quote(skill_name.strip(),safe='')}"
+
+    return make_request(api_url,endpoint)
