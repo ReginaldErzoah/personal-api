@@ -43,3 +43,14 @@ def make_request(api_url: str, endpoint: str):
 
     except requests.exceptions.Timeout:
         return {"error": "The API request timed out"}
+
+    except requests.exceptions.HTTPError:
+        try:
+            error_details = response.json()
+        except requests.exceptions.JSONDecodeError:
+            error_details = response.text
+
+        return {
+            "error": f"API request failed with status: {response.status_code}.",
+            "details": error_details
+        }
