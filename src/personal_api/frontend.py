@@ -4,7 +4,6 @@ from urllib.parse import quote
 import gradio as gr
 import requests
 
-
 DEFAULT_API_URL = os.getenv(
     "PERSONAL_API_URL",
     "http://127.0.0.1:8000"
