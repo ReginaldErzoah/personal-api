@@ -299,3 +299,63 @@ with gr.Blocks(title=APP_TITLE) as app:
             inputs=[api_url, project_name],
             outputs=[project_name_output]
         )
+
+
+    with gr.Tab("Certifications"):
+
+        gr.Markdown("## Professional Certifications")
+
+        certifications_button = gr.Button(
+            "Load All Certifications",
+            variant="primary"
+        )
+
+        certifications_output = gr.JSON(
+            label="Certifications"
+        )
+
+        certifications_button.click(
+            fn=get_certifications,
+            inputs=[api_url],
+            outputs=[certifications_output]
+        )
+
+        gr.Markdown("### Find a Certification")
+
+        with gr.Row():
+
+            certification_id = gr.Textbox(
+                label="Certification ID",
+                placeholder="Enter certification ID"
+            )
+
+            certification_id_button = gr.Button("Find by ID")
+
+        certification_id_output = gr.JSON(
+            label="Certification Details by ID"
+        )
+
+        certification_id_button.click(
+            fn=get_certification_by_id,
+            inputs=[api_url, certification_id],
+            outputs=[certification_id_output]
+        )
+
+        with gr.Row():
+
+            certification_name = gr.Textbox(
+                label="Certification Name",
+                placeholder="Enter certification name"
+            )
+
+            certification_name_button = gr.Button("Find by Name")
+
+        certification_name_output = gr.JSON(
+            label="Certification Details by Name"
+        )
+
+        certification_name_button.click(
+            fn=get_certification_by_name,
+            inputs=[api_url, certification_name],
+            outputs=[certification_name_output]
+        )
