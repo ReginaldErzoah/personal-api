@@ -35,3 +35,11 @@ def make_request(api_url: str, endpoint: str):
 
         except requests.exceptions.JSONDecodeError:
             return {"response": response.text}
+
+    except requests.exceptions.ConnectionError:
+        return {"error": "Couldn't connect to the API",
+                "details": "Check if FastAPI application is running."
+                "Make sure API url is also valid."}
+
+    except requests.exceptions.Timeout:
+        return {"error": "The API request timed out"}
