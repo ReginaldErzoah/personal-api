@@ -196,3 +196,46 @@ with gr.Blocks(title=APP_TITLE) as app:
             inputs=[api_url],
             outputs=[profile_output]
         )
+
+
+    with gr.Tab("Skills"):
+
+        gr.Markdown("## Technical Skills")
+
+        with gr.Row():
+
+            skills_button = gr.Button(
+                "Load All Skills",
+                variant="primary"
+            )
+
+            skills_output = gr.JSON(
+                label="All Skills"
+            )
+
+        skills_button.click(
+            fn=get_skills,
+            inputs=[api_url],
+            outputs=[skills_output]
+        )
+
+        gr.Markdown("### Search for an Individual Skill")
+
+        with gr.Row():
+
+            skill_name = gr.Textbox(
+                label="Skill Name",
+                placeholder="e.g. Python"
+            )
+
+            skill_search_button = gr.Button("Search Skill")
+
+        skill_output = gr.JSON(
+            label="Skill Details"
+        )
+
+        skill_search_button.click(
+            fn=get_skill_by_name,
+            inputs=[api_url, skill_name],
+            outputs=[skill_output]
+        )
