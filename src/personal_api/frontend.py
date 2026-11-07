@@ -86,3 +86,12 @@ def get_skill_by_name(api_url, skill_name):
 
 def get_projects(api_url):
     return make_request(api_url,"/projects")
+
+def get_project_by_id(api_url, project_id):
+
+    if not project_id or not str(project_id).strip():
+        return {"error": "Enter a project ID."}
+
+    endpoint = f"/projects/by_id/{quote(str(project_id).strip(),safe='')}"
+
+    return make_request(api_url,endpoint)
