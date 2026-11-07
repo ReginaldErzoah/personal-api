@@ -116,3 +116,18 @@ def get_education(api_url):
     return make_request(api_url, "/education")
 
 
+def get_certifications(api_url):
+    return make_request(api_url, "/certifications")
+
+
+def get_certification_by_id(api_url, certification_id):
+
+    if not certification_id or not str(certification_id).strip():
+        return {"error": "Enter a certification ID."}
+
+    endpoint = (
+        f"/certifications/by_id/"
+        f"{quote(str(certification_id).strip(), safe='')}"
+    )
+
+    return make_request(api_url, endpoint)
