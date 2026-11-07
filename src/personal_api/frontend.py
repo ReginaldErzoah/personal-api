@@ -144,3 +144,17 @@ def get_certification_by_name(api_url, certification_name):
     )
 
     return make_request(api_url, endpoint)
+
+
+with gr.Blocks(title=APP_TITLE) as app:
+
+    gr.Markdown(
+        f"""
+        # {APP_TITLE}
+
+        {APP_DESCRIPTION}
+        """
+    )
+
+
+    
