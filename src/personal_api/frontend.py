@@ -108,14 +108,6 @@ def get_project_by_name(api_url,project_name):
     return make_request(api_url,endpoint)
 
 
-def get_experience(api_url):
-    return make_request(api_url, "/experience")
-
-
-def get_education(api_url):
-    return make_request(api_url, "/education")
-
-
 def get_certifications(api_url):
     return make_request(api_url, "/certifications")
 
