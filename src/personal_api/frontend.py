@@ -60,3 +60,10 @@ def make_request(api_url: str, endpoint: str):
             "error": "An unexpected request error occurred.",
             "details": str(error)
         }
+
+
+def check_api_health(api_url):
+    return make_request(api_url,"/health")
+
+def get_profile(api_url):
+    return make_request(api_url,"/profile")
