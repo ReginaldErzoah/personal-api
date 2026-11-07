@@ -82,3 +82,7 @@ def get_skill_by_name(api_url, skill_name):
     endpoint = f"/skills/{quote(skill_name.strip(),safe='')}"
 
     return make_request(api_url,endpoint)
+
+
+def get_projects(api_url):
+    return make_request(api_url,"/projects")
