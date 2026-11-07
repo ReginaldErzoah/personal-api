@@ -15,3 +15,10 @@ APP_DESCRIPTION = """
 Explore my profile professional profile, technical skills, projects 
 and certifications through my Personal API.
 """
+
+def make_request(api_url: str, endpoint: str):
+
+    api_url = api_url.strip().rstrip("/")
+
+    if not api_url:
+        return {"error": "Provide a valid API URL."}
