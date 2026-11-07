@@ -106,3 +106,13 @@ def get_project_by_name(api_url,project_name):
     endpoint = f"/projects/by_name/{quote(str(project_name).strip(),safe='')}"
 
     return make_request(api_url,endpoint)
+
+
+def get_experience(api_url):
+    return make_request(api_url, "/experience")
+
+
+def get_education(api_url):
+    return make_request(api_url, "/education")
+
+
