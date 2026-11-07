@@ -22,3 +22,16 @@ def make_request(api_url: str, endpoint: str):
 
     if not api_url:
         return {"error": "Provide a valid API URL."}
+
+    url = f"{api_url}/{endpoint.lstrip("/")}"
+
+    try:
+        response = requests.get(url,timeout=15)
+
+        response.raise_for_status()
+
+        try:
+            response.json()
+
+        except requests.exceptions.JSONDecodeError:
+            return {"response": response.text}
