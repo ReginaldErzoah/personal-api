@@ -54,3 +54,9 @@ def make_request(api_url: str, endpoint: str):
             "error": f"API request failed with status: {response.status_code}.",
             "details": error_details
         }
+
+    except requests.exceptions.RequestException as error:
+        return {
+            "error": "An unexpected request error occurred.",
+            "details": str(error)
+        }
