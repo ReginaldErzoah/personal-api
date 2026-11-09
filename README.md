@@ -355,7 +355,6 @@ personal-api/
 | `pyproject.toml` | Defines project metadata, dependencies, and configuration. |
 | `uv.lock` | Records resolved dependency versions. |
 
-
 ## Testing and Code Quality
 
 The project uses pytest for automated testing and Ruff for code quality checks.
