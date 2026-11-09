@@ -354,7 +354,7 @@ personal-api/
 | `.dockerignore` | Excludes unnecessary files from Docker build contexts. |
 | `pyproject.toml` | Defines project metadata, dependencies, and configuration. |
 | `uv.lock` | Records resolved dependency versions. |
-| `DEVELOPMENT_ROADMAP.md` | Documents pla
+| `DEVELOPMENT_ROADMAP.md` | Docume
 
 ## Testing and Code Quality
 
