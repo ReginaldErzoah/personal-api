@@ -337,7 +337,6 @@ personal-api/
 ├── pyproject.toml
 ├── uv.lock
 ├── README.md
-├
 └── LICENSE
 ```
 
