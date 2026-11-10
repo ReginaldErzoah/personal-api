@@ -337,7 +337,7 @@ personal-api/
 ├── pyproject.toml
 ├── uv.lock
 ├── README.md
-├── DEVELOPMENT_ROADMAP.md
+├── DEVELOPMENT_ROADMA
 └── LICENSE
 ```
 
